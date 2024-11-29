@@ -1,0 +1,81 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Fatih\\source\\repos\\LoverAdvent\\LoverAdvent\\bin\\Release\\net8.0\\wwwroot\\_framework\\blazor.webassembly.js",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
+    },
+    {
+      "Id": "C:\\Users\\Fatih\\source\\repos\\LoverAdvent\\LoverAdvent\\obj\\Release\\net8.0\\compressed\\srl5gmkf7s.gz",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js.gz"
+    },
+    {
+      "Id": "C:\\Users\\Fatih\\source\\repos\\LoverAdvent\\LoverAdvent\\obj\\Release\\net8.0\\service-worker-assets.js",
+      "PackagePath": "staticwebassets\\service-worker-assets.js"
+    },
+    {
+      "Id": "C:\\Users\\Fatih\\source\\repos\\LoverAdvent\\LoverAdvent\\obj\\Release\\net8.0\\service-worker\\service-worker.published.js",
+      "PackagePath": "staticwebassets\\service-worker.js"
+    },
+    {
+      "Id": "C:\\Users\\Fatih\\source\\repos\\LoverAdvent\\LoverAdvent\\wwwroot\\css\\app.css",
+      "PackagePath": "staticwebassets\\css\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\Fatih\\source\\repos\\LoverAdvent\\LoverAdvent\\wwwroot\\icon-192.png",
+      "PackagePath": "staticwebassets\\icon-192.png"
+    },
+    {
+      "Id": "C:\\Users\\Fatih\\source\\repos\\LoverAdvent\\LoverAdvent\\wwwroot\\icon-512.png",
+      "PackagePath": "staticwebassets\\icon-512.png"
+    },
+    {
+      "Id": "C:\\Users\\Fatih\\source\\repos\\LoverAdvent\\LoverAdvent\\wwwroot\\img\\36488.jpg",
+      "PackagePath": "staticwebassets\\img\\36488.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Fatih\\source\\repos\\LoverAdvent\\LoverAdvent\\wwwroot\\img\\background.png",
+      "PackagePath": "staticwebassets\\img\\background.png"
+    },
+    {
+      "Id": "C:\\Users\\Fatih\\source\\repos\\LoverAdvent\\LoverAdvent\\wwwroot\\img\\background.webp",
+      "PackagePath": "staticwebassets\\img\\background.webp"
+    },
+    {
+      "Id": "C:\\Users\\Fatih\\source\\repos\\LoverAdvent\\LoverAdvent\\wwwroot\\img\\heart.svg",
+      "PackagePath": "staticwebassets\\img\\heart.svg"
+    },
+    {
+      "Id": "C:\\Users\\Fatih\\source\\repos\\LoverAdvent\\LoverAdvent\\wwwroot\\img\\holly.svg",
+      "PackagePath": "staticwebassets\\img\\holly.svg"
+    },
+    {
+      "Id": "C:\\Users\\Fatih\\source\\repos\\LoverAdvent\\LoverAdvent\\wwwroot\\img\\snowflake.svg",
+      "PackagePath": "staticwebassets\\img\\snowflake.svg"
+    },
+    {
+      "Id": "C:\\Users\\Fatih\\source\\repos\\LoverAdvent\\LoverAdvent\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\Fatih\\source\\repos\\LoverAdvent\\LoverAdvent\\wwwroot\\manifest.webmanifest",
+      "PackagePath": "staticwebassets\\manifest.webmanifest"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.LoverAdvent.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.build.LoverAdvent.props",
+      "PackagePath": "build\\LoverAdvent.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.LoverAdvent.props",
+      "PackagePath": "buildMultiTargeting\\LoverAdvent.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildTransitive.LoverAdvent.props",
+      "PackagePath": "buildTransitive\\LoverAdvent.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

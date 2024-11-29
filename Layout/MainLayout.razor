@@ -1,0 +1,25 @@
+﻿@using MudBlazor
+@inherits LayoutComponentBase
+
+<MudThemeProvider Theme="@Theme"/>
+<MudPopoverProvider />
+
+<MudLayout>
+    <MudMainContent Class="d-flex justify-content-center align-items-center" Style="width: 100%; height: 100%;">
+        @Body
+    </MudMainContent>
+</MudLayout>
+
+@code {
+    private string[] FontFamilies = new[] { "Josefin Slab", "sans-serif" };
+    public MudTheme Theme { get; set; } = new MudTheme
+        {
+            Typography = new Typography
+            {
+                Default = new Default
+                {
+                    FontFamily = new[] { "Josefin Slab", "sans-serif" }
+                }
+            }
+        };
+}

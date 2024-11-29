@@ -1,0 +1,86 @@
+﻿@page "/"
+@using LoverAdvent.Entity
+@using MudBlazor
+
+<div class="carousel-wrapper">
+    <MudCarousel TData="DayInfo" AutoCycle="false" Class="carousel-container" Style="width: 100%; height: 400px;" ShowBullets="false">
+        @foreach (var day in Days)
+        {
+            <MudCarouselItem Style="display: flex; align-items: center; justify-content: center; height: auto; flex-direction: column;">
+                <div class="envelope-container">
+                    <div class="envelope" style="@GetEnvelopeStyle(day.Number)" @onclick="(() => OpenEnvelope(day.Number))">
+                        <div class="back"></div>
+                        <div class="letter" style="margin-top: 8px; display: @(IsEnvelopeOpen(day.Number) ? "block" : "none")">
+                            <div style="margin-top: 26px">
+                                <MudText Typo="Typo.h6">@day.Quote</MudText>
+                            </div>
+                        </div>
+                        <div class="front"></div>
+                        <div class="top"></div>
+                    </div>
+                </div>
+
+                <MudText Typo="Typo.h3">
+                    @day.Number
+                </MudText>
+            </MudCarouselItem>
+        }
+    </MudCarousel>
+</div>
+
+@code {
+    private List<DayInfo> Days;
+    private HashSet<int> OpenedEnvelopes = new HashSet<int>();
+
+    // Advent starts on December 1st and ends on December 24th
+    private int CurrentAdventDay => (DateTime.Now.Month == 12 && DateTime.Now.Day <= 24) ? DateTime.Now.Day : 0;
+
+    private string[] quotes = new string[24]
+    {
+        "You're amazing!", "I love you more than words can say.",
+        "Every moment with you is special.", "You make my heart smile every day.",
+        "You are my sunshine on a cloudy day.", "I’m so lucky to have you in my life.",
+        "You are my best friend and soulmate.", "I cherish every memory we create together.",
+        "You make the world a better place for me.", "You are my dream come true.",
+        "Your smile lights up my life.", "I’m grateful for every moment with you.",
+        "You make me feel loved and appreciated.", "I admire your kindness and compassion.",
+        "You inspire me to be my best self.", "My love for you grows stronger every day.",
+        "You are the reason for my happiness.", "With you, life feels complete.",
+        "I’m proud to call you mine.", "Your love is the greatest gift I’ve ever received.",
+        "You are my everything.", "My heart belongs to you forever.",
+        "Thank you for being my greatest adventure.", "Merry Christmas! I love you endlessly!"
+    };
+
+    protected override void OnInitialized()
+    {
+        Days = Enumerable.Range(1, 24)
+            .Select(i => new DayInfo
+                {
+                    Number = i,
+                    Quote = quotes[i - 1] // Assign each quote to its respective day
+                })
+            .ToList();
+    }
+
+    private bool IsEnvelopeOpen(int day)
+    {
+        return OpenedEnvelopes.Contains(day);
+    }
+
+    private void OpenEnvelope(int day)
+    {
+        if (day <= CurrentAdventDay && day > 0) // Check if the day is valid for opening
+        {
+            OpenedEnvelopes.Add(day);
+        }
+    }
+
+    private string GetEnvelopeStyle(int day)
+    {
+        if (day > CurrentAdventDay || day <= 0) // If the day is in the future or invalid
+        {
+            return  "pointer-events: none; opacity: 0.5;"; // Disable interaction and fade out future envelopes
+        }
+        return "";
+    }
+}
